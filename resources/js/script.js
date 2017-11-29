@@ -42,7 +42,30 @@ function displayCart() {
 	var output = "";
 	var position = 1;
 	for (var i in cartArray) {
-		output += "<tr>"+"<td>"+"<button class='delete-item' data-name='"+cartArray[i].name+"'>X</button>"+"<p>"+position+"</p>"+"</td>"+"<td>"+cartArray[i].name+"</td>"+"<td>"+"<span>"+cartArray[i].count+"</span>"+"<div class='add-remove-buttons'>"+" <button class='plus-item' data-name='"+cartArray[i].name+"'> + </button> "+"<button class='substract-item' data-name='"+cartArray[i].name+"'> - </button> "+"</div>"+"</td>"+"<td>"+cartArray[i].price+"</td>"+"<td>"+cartArray[i].total+"</td>"+"</tr>";
+		output += `
+				  <tr>
+					<td>
+					  <button class='delete-item' data-name='"+cartArray[i].name+"'>X</button>
+					  <p>${position}</p>
+					</td>
+					<td>
+					  ${cartArray[i].name}
+					</td>
+					<td>
+					  <span>${cartArray[i].count}</span>
+					  <div class='add-remove-buttons'>
+						<button class='plus-item' data-name='${cartArray[i].name}'>+</button>
+						<button class='substract-item' data-name='${cartArray[i].name}'> - </button>
+					  </div>
+					</td>
+					<td>
+					  ${cartArray[i].price}
+					</td>
+					<td>
+					  ${cartArray[i].total}
+					</td>
+				  </tr>
+				`
 		
 		position ++;
 	}
@@ -73,7 +96,6 @@ $("#show-cart").on("click", ".substract-item", function(event) {
 
 /***************************************/
 // Shopping cart functions
-/* Scope - Determins where a variable or a value is visible */ 
 
 var shoppingCart = {};
 shoppingCart.cart = [];
@@ -101,8 +123,8 @@ shoppingCart.removeItemFromCart = function(name) {
 	for (var i in  this.cart) {
 		if (this.cart[i].name === name) {
 			this.cart[i].count --;
-			if (this.cart[i].count === 0) {
-				this.cart.splice(i, 1); //it removes "1" item from the array
+			if (this.cart[i].count == 0) {
+				this.cart.splice(i, 1); 
 			}
 			break;
 		}
@@ -142,7 +164,6 @@ shoppingCart.totalCart = function() {
 };
 
 shoppingCart.listCart = function() {
-	/*return cart.slice(); -> here, the slice property makes a copy of the array; but still reference the objects inside*/
 	var cartCopy = [];
 	for (var i in this.cart) {
 		var item = this.cart[i];
@@ -167,32 +188,6 @@ shoppingCart.loadCart = function() {
 shoppingCart.loadCart();
 displayCart();
 
-//when you use the sintax below, it actually generates an object
-
-/*
-// new item for shopping cart
-var apple = new Item("Apple", 1.99, 1); // {name, price, count}
-
-cart.push(new Item("Brush", 2.13, 1));
-cart.push(apple);*/
-
-// addItemToCart(name, price, count)
-
-// removeItemFromCart(name) // Removes one item
-
-// removeItemFromCartAll(name) //Removes all items with name
-
-//clearCart()
-
-//countCart() -> Returns total count
-
-//totalCart() -> Returns the total cost
-
-//listCart() -> an array of items
-
-//saveCart() -> Local
-
-//loadCart() -> loads the cart when page is opened
 
 
 

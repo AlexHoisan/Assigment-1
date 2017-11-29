@@ -54,7 +54,7 @@ h1 {
 	margin: 0;
 	margin-bottom: 20px;
 	color: #fff;
-	font-size: 400%;
+	font-size: 4rem;
 	font-weight: 800;
 	word-spacing: 4px;
 	letter-spacing: 1px;
@@ -72,7 +72,7 @@ h1:after {
 }
 
 h3 {
-	font-size: 150%;
+	font-size: 1.5rem;
 	margin-bottom: 15px;
 	color: #d8d8d8;
 	text-align: center;
@@ -129,7 +129,7 @@ header {
 	color: #d8d8d8;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 70%;
+	font-size: 0.7rem;
 	border-bottom: 2px solid transparent;
 	transition: border-bottom 0.2s;
 }
@@ -149,7 +149,7 @@ header {
 }
 
 .mobile-nav-icon i {
-	font-size: 180%;
+	font-size: 1.8rem;
 	color: #fff;
 }
 
@@ -166,7 +166,7 @@ header {
 	background: transparent;
 	border: 0;
 	text-transform: uppercase;
-	font-size: 80%;
+	font-size: 0.8rem;
 	padding-left: 0;
 }
 
@@ -204,7 +204,7 @@ h6 {
 	text-align: center;
 	padding-top: 8%;
 	color: #000;
-	font-size: 110%;
+	font-size: 1.1rem;
 	font-weight: 300i;
 	height: 20%;
 }
@@ -217,22 +217,10 @@ p {
 }
 
 .food-price {
-	font-size: 100%;
+	font-size: 1rem;
     font-weight: 300i;
     color: #e67e22;
 }
-
-/*
-.food-photo i{
-    width: 100%;
-    height: auto;
-    transform: scale(1);
-    transition: transform 0.5s;  
-    backface-visibility: hidden;
-	height: 100%;
-	z-index: 999;
-}
-*/
 
 .food-photo:hover {
     transform: scale(1.08);
@@ -244,7 +232,7 @@ p {
 
 h5 {
 	text-align: center;
-	font-size: 200%;
+	font-size: 2rem;
 	margin-top: 7%;
 	color: #e67e22;
 	position: relative;
@@ -279,14 +267,14 @@ h5 {
 }
 
 .row-modal li li:first-child {
-	font-size: 120%;
+	font-size: 1.2rem;
 	width: 35%;
 	margin-left: 4%;
 }
 	
 .row-modal li li:last-child {
 	text-align: right;
-	font-size: 100%;
+	font-size: 1rem;
 	padding-top: 2%;
 	width: 35%;
 }
@@ -302,7 +290,7 @@ select {
 
 .p-modal {
 	text-align: left;
-	font-size: 80%;
+	font-size: 0.8rem;
 	color: #000;
 }
 
@@ -326,7 +314,7 @@ select {
 footer {
 	background-color: #333;
 	padding: 2% 0 0 0;
-	font-size: 80%;
+	font-size: 0.8rem;
 	margin-top: 2%;
 }
 
@@ -372,7 +360,7 @@ footer {
 
 .social-links li a:link,
 .social-links li a:visited {
-    font-size: 160%;
+    font-size: 1.6rem;
 }
 
 .ion-social-facebook,
@@ -419,8 +407,6 @@ footer p {
 }
 
 .close-dashboard {
-	position: relative;
-	left: 100%;
 	cursor: pointer;
 }
 .cart-icon {
@@ -431,11 +417,11 @@ footer p {
 	cursor: pointer;
 	background-color: #648B79;
 	z-index: 100000;
-	font-size: 200%;
+	font-size: 2rem;
 }
 
 .cart-icon span {
-	font-size: 100%;
+	font-size: 1rem;
 	font-weight: 600;
 	color: #e67e22;
 }
@@ -453,7 +439,7 @@ th {
 	text-align: center;
 	background-color: #464242;
 	color: #e67e22;
-	font-size: 120%;
+	font-size: 1.2rem;
 	font-weight: 600;
 }
 
@@ -470,11 +456,10 @@ td {
 table span {
 	position: relative;
 	width: 50%;
+	height: 100%;
 	float: left;
-	text-align: right;
-	height: 50%;
-	top: 30%;
-	padding: 4% 0;
+	text-align: right;	
+	padding-top: 8%;
 }
 
 table p {
@@ -550,43 +535,43 @@ table p {
 
 @media only screen and (max-width: 1500px) {
 	th {
-		font-size: 90%;
+		font-size: 0.9rem;
 	}
 	
 	.table-footer {
-		font-size: 90%
+		font-size: 0.9rem;
 	}
 }
 
 @media only screen and (max-width: 1240px){	
 	h1 {
-		font-size: 280%;
+		font-size: 2.8rem;
 	}
 	
 	h3 {
-		font-size: 130%;
+		font-size: 1.3rem;
 	}
 	
 	.btn-assigment {
 		background: transparent;
 		border: 0;
 		text-transform: uppercase;
-		font-size: 70%;
+		font-size: 0.7rem;
 		padding-left: 0;
 	}
 		
 	h6 {
-		font-size: 80%;
+		font-size: 0.8rem;
 	}
 	
 	p {
 		margin-top: 10%;
 		margin-bottom: 3%;
-		font-size: 90%;
+		font-size: 0.9rem;
 	}
 
 	.food-price {
-		font-size: 100%;
+		font-size: 1rem;
 		margin-top: 15%;
 	}
 	
@@ -595,7 +580,7 @@ table p {
 	}
 	
 	th {
-		font-size: 80%;
+		font-size: 0.8rem;
 	}
 	
 	table p {
@@ -607,27 +592,27 @@ table p {
 	}
 	
 	.table-footer {
-		font-size: 80%
+		font-size: 0.8rem;
 	}
 }
 
 @media only screen and (max-width: 1035px) {
 	th {
-		font-size: 60%;
+		font-size: 0.6rem;
 	}
 	
 	td {
-		font-size: 70%;
+		font-size: 0.7rem;
 	}
 	
 	.table-footer {
-		font-size: 60%;
+		font-size: 0.6rem;
 	}
 }
 
 @media only screen and (max-width: 992px) {
 	.row-modal li li:first-child {
-		font-size: 120%;
+		font-size: 1.2rem;
 		width: 48%;
 		margin-left: 7%;
 	}
@@ -635,25 +620,25 @@ table p {
 
 @media only screen and (max-width: 780px) {
 	th {
-		font-size: 50%;
+		font-size: 0.5rem;
 	}
 	
 	td {
-		font-size: 60%;
+		font-size: 0.6rem;
 	}
 	
 	.table-footer {
-		font-size: 50%;
+		font-size: 0.5rem;
 	}
 }
 
 @media only screen and (max-width: 750px) {
 	h1 {
-		font-size: 200%;
+		font-size: 2rem;
 	}
 	
 	h3 {
-		font-size: 100%;
+		font-size: 1rem;
 	}
 	
 	.dropdowns .row {
@@ -664,26 +649,26 @@ table p {
 		background: transparent;
 		border: 0;
 		text-transform: uppercase;
-		font-size: 70%;
+		font-size: 0.7rem;
 		padding-left: 0;
 		padding-right: 0;
 		margin-right: 20px;
 	}
 	
 	h6 {
-		font-size: 80%;
+		font-size: 0.8rem;
 		margin-bottom: 10%;
 		height: 10vh;
 	}
 	
 	p {
 		margin-bottom: 3%;
-		font-size: 80%;
+		font-size: 0.8rem;
 		height: 5vh;
 	}
 
 	.food-price {
-		font-size: 100%;
+		font-size: 1rem;
 		height: 5vh;
 		margin-top: 15%;
 	}
@@ -728,7 +713,7 @@ table p {
         display: block;
         border: 0;
         padding: 10px 0;
-        font-size: 100%;
+        font-size: 1rem;
     }
 	
 	.hero-text-box {
@@ -750,14 +735,14 @@ table p {
 		text-align: center;
 		padding-top: 8%;
 		color: #000;
-		font-size: 110%;
+		font-size: 1.1rem;
 		font-weight: 300i;
 		height: 20%;
 		margin-bottom: 2%;
 	}
 
 	p {
-		font-size: 100%;
+		font-size: 1rem;
 	}
 	
 	.food-price {
