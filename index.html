@@ -1,102 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-       
-        <meta charset="utf-8">        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Food Club is a premium food delivery service with the mission to bring affordable and tasty meals to as many people as posible.">
-        
-        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">        
-        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">    
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css">        
-        
-        <title>Food Show</title> 
-        
- 	</head>
-      	
-     <body>     		
-     	<header>
-     		<nav>
-     			<div class="container-fluid">
-     				<img class="logo" src="/resources/img/Food-Show-Logo-1.png" alt="Food Club logo">
-     				<ul class="main-nav js--main-nav">
-     					<li><a href="#">Home</a></li>
-     					<li><a href="#">About</a></li>
-     					<li><a href="#">Service</a></li>
-     					<li><a href="#">Blog</a></li>
-     					<li><a href="#">Contacts</a></li>
-     				</ul>
-     			</div>     			
-     				<a href="#" class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>     			
-     		</nav>
-     		<div class="hero-text-box">
-     			<h1>Ordering food</h1>     				
-     			<h3>Goodbye hunger sensation <br> Hello super tasty meals.</h3>					
-     		</div>
-     	</header>
-     		
-     	<section class="dropdowns">
-     		<div class="container-fluid">
-     			<div class="row">
-					<div class="dropdown">
-					  <button class="btn btn-light dropdown-toggle btn-assigment" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Food Club is a premium food delivery service with the mission to bring affordable and tasty meals to as many people as posible.">
+
+	<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+
+	<title>Food Show</title>
+
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="container-fluid">
+				<img class="logo" src="/resources/img/Food-Show-Logo-1.png" alt="Food Club logo">
+				<ul class="main-nav js--main-nav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Service</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contacts</a></li>
+				</ul>
+			</div>
+			<a href="#" class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+		</nav>
+		<div class="hero-text-box">
+			<h1>Ordering food</h1>
+			<h3>Goodbye hunger sensation <br> Hello super tasty meals.</h3>
+		</div>
+	</header>
+
+	<div>
+		<i class="ion-android-cart cart-icon" data-toggle="modal" data-target=".modal-dashboard"><span id="count-cart">X</span></i>
+	</div>
+
+	<section class="dropdowns">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="dropdown">
+					<button class="btn btn-light dropdown-toggle btn-assigment" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Category
 					  </button>
-					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="dropdown-item" href="#">Entrees</a>
 						<a class="dropdown-item" href="#">Second Courses</a>
 						<a class="dropdown-item" href="#">Salads</a>
-					  </div>
 					</div>
-					<div class="dropdown">
-					  <button class="btn btn-light dropdown-toggle btn-assigment" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				</div>
+				<div class="dropdown">
+					<button class="btn btn-light dropdown-toggle btn-assigment" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Sorting
 					  </button>
-					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="dropdown-item" href="#">Action</a>
 						<a class="dropdown-item" href="#">Another action</a>
 						<a class="dropdown-item" href="#">Something else here</a>
-					  </div>
 					</div>
-					<div class="dropdown">
-					  <button class="btn btn-light dropdown-toggle btn-assigment" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				</div>
+				<div class="dropdown">
+					<button class="btn btn-light dropdown-toggle btn-assigment" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Vegetarian
 					  </button>
-					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="dropdown-item" href="#">Action</a>
 						<a class="dropdown-item" href="#">Another action</a>
 						<a class="dropdown-item" href="#">Something else here</a>
-					  </div>
 					</div>
-     			</div>
-     		</div>
-     	</section>
-     		
-     	<section class="food">
-     		<div class="container-fluid">
-     			<div class="row">
-					<ul class="food-box">
-						<li data-toggle="modal" data-target="#Modal1">
-							<figure class="food-photo img-thumbnail">
-								<img class="img-fluid" src="/resources/img/1.jpg" alt="Korean bibimbap with egg and vegetables">
-								<h6>Korean bibimbap with egg and vegetables</h6>
-								<p>Second courses</p>
-								<p class="food-price">$15.00</p>
-							</figure>
-						</li>
-							<div class="modal fade bd-example-modal-lg" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg" role="document">
-								<div class="modal-content">
-								  <div class="modal-header">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="food">
+		<div class="container-fluid">
+			<div class="row">
+				<ul class="food-box">
+					<li data-toggle="modal" data-target="#Modal1">
+						<figure class="food-photo img-thumbnail">
+							<img class="img-fluid" src="/resources/img/1.jpg" alt="Korean bibimbap with egg and vegetables">
+							<h6>Korean bibimbap with egg and vegetables</h6>
+							<p>Second courses</p>
+							<p class="food-price">$15.00</p>
+						</figure>
+					</li>
+					<div class="modal fade bd-example-modal-lg" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
 									<h5 class="modal-title" id="exampleModalLabel">Korean bibimbap with egg and vegetables</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									  <span aria-hidden="true">&times;</span>
 									</button>
-								  </div>
-								  <div class="modal-body">
+								</div>
+								<div class="modal-body">
 									<div class="container-fluid">
 										<div class="row-modal">
 											<ul>
@@ -126,33 +131,33 @@
 												</li>
 											</ul>
 										</div>
-									 </div>
-								  </div>
-								  <div class="modal-footer">
+									</div>
+								</div>
+								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 									<button type="button" class="btn add-to-cart" data-name="Korean bibimbap" data-price="15.00">Add to cart</button>
-								  </div>
 								</div>
-							  </div>
-							</div>							
-						<li data-toggle="modal" data-target="#Modal2">
-							<figure class="food-photo  img-thumbnail">
-								<img class="img-fluid" src="/resources/img/2.jpg" alt="Simple italian pizza with cherry tomatoes">
-								<h6>Simple italian pizza with cherry tomatoes</h6>
-								<p>Second courses</p>
-								<p class="food-price">$13.00</p>
-							</figure>
-						</li>
-							<div class="modal fade bd-example-modal-lg" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg" role="document">
-								<div class="modal-content">
-								  <div class="modal-header">
+							</div>
+						</div>
+					</div>
+					<li data-toggle="modal" data-target="#Modal2">
+						<figure class="food-photo  img-thumbnail">
+							<img class="img-fluid" src="/resources/img/2.jpg" alt="Simple italian pizza with cherry tomatoes">
+							<h6>Simple italian pizza with cherry tomatoes</h6>
+							<p>Second courses</p>
+							<p class="food-price">$13.00</p>
+						</figure>
+					</li>
+					<div class="modal fade bd-example-modal-lg" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
 									<h5 class="modal-title" id="exampleModalLabel">Simple italian pizza with cherry tomatoes</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									  <span aria-hidden="true">&times;</span>
 									</button>
-								  </div>
-								  <div class="modal-body">
+								</div>
+								<div class="modal-body">
 									<div class="container-fluid">
 										<div class="row-modal">
 											<ul>
@@ -182,33 +187,33 @@
 												</li>
 											</ul>
 										</div>
-									 </div>
-								  </div>
-								  <div class="modal-footer">
+									</div>
+								</div>
+								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 									<button type="button" class="btn add-to-cart" data-name="Simple italian pizza" data-price="13.00">Add to cart</button>
-								  </div>
 								</div>
-							  </div>
-							</div>								
-						<li data-toggle="modal" data-target="#Modal3">
-							<figure class="food-photo  img-thumbnail">
-								<img class="img-fluid" src="/resources/img/3.jpg" alt="Chicken breast steak with vegetables">
-								<h6>Chicken breast steak with vegetables</h6>
-								<p>Second courses</p>
-								<p class="food-price">$16.00</p>
-							</figure>
-						</li>							
-							<div class="modal fade bd-example-modal-lg" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg" role="document">
-								<div class="modal-content">
-								  <div class="modal-header">
+							</div>
+						</div>
+					</div>
+					<li data-toggle="modal" data-target="#Modal3">
+						<figure class="food-photo  img-thumbnail">
+							<img class="img-fluid" src="/resources/img/3.jpg" alt="Chicken breast steak with vegetables">
+							<h6>Chicken breast steak with vegetables</h6>
+							<p>Second courses</p>
+							<p class="food-price">$16.00</p>
+						</figure>
+					</li>
+					<div class="modal fade bd-example-modal-lg" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
 									<h5 class="modal-title" id="exampleModalLabel">Chicken breast steak with vegetables</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									  <span aria-hidden="true">&times;</span>
 									</button>
-								  </div>
-								  <div class="modal-body">
+								</div>
+								<div class="modal-body">
 									<div class="container-fluid">
 										<div class="row-modal">
 											<ul>
@@ -238,33 +243,33 @@
 												</li>
 											</ul>
 										</div>
-									 </div>
-								  </div>
-								  <div class="modal-footer">
+									</div>
+								</div>
+								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 									<button type="button" class="btn add-to-cart" data-name="Chicken breast steak" data-price="16.00">Add to cart</button>
-								  </div>
 								</div>
-							  </div>
-							</div>								
-						<li data-toggle="modal" data-target="#Modal4">
-							<figure class="food-photo  img-thumbnail">
-								<img class="img-fluid" src="/resources/img/4.jpg" alt="Autumn pumpkin soup">
-								<h6>Autumn pumpkin soup</h6>
-								<p>Entrees</p>
-								<p class="food-price">$10.00</p>
-							</figure>
-						</li>							
-							<div class="modal fade bd-example-modal-lg" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg" role="document">
-								<div class="modal-content">
-								  <div class="modal-header">
+							</div>
+						</div>
+					</div>
+					<li data-toggle="modal" data-target="#Modal4">
+						<figure class="food-photo  img-thumbnail">
+							<img class="img-fluid" src="/resources/img/4.jpg" alt="Autumn pumpkin soup">
+							<h6>Autumn pumpkin soup</h6>
+							<p>Entrees</p>
+							<p class="food-price">$10.00</p>
+						</figure>
+					</li>
+					<div class="modal fade bd-example-modal-lg" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
 									<h5 class="modal-title" id="exampleModalLabel">Autumn pumpkin soup</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									  <span aria-hidden="true">&times;</span>
 									</button>
-								  </div>
-								  <div class="modal-body">
+								</div>
+								<div class="modal-body">
 									<div class="container-fluid">
 										<div class="row-modal">
 											<ul>
@@ -294,35 +299,35 @@
 												</li>
 											</ul>
 										</div>
-									 </div>
-								  </div>
-								  <div class="modal-footer">
+									</div>
+								</div>
+								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 									<button type="button" class="btn add-to-cart" data-name="Autumn pumpkin soup" data-price="10.00">Add to cart</button>
-								  </div>
 								</div>
-							  </div>
-							</div>								
-					</ul>
-					<ul class="food-box">
-						<li data-toggle="modal" data-target="#Modal5">
-							<figure class="food-photo  img-thumbnail">
-								<img class="img-fluid" src="/resources/img/5.jpg" alt="Paleo beef steak with vegetables">
-									<h6>Paleo beef steak with vegetables</h6>
-									<p>Second courses</p>
-									<p class="food-price">$35.00</p>								
-							</figure>
-						</li>
-							<div class="modal fade bd-example-modal-lg" id="Modal5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg" role="document">
-								<div class="modal-content">
-								  <div class="modal-header">
+							</div>
+						</div>
+					</div>
+				</ul>
+				<ul class="food-box">
+					<li data-toggle="modal" data-target="#Modal5">
+						<figure class="food-photo  img-thumbnail">
+							<img class="img-fluid" src="/resources/img/5.jpg" alt="Paleo beef steak with vegetables">
+							<h6>Paleo beef steak with vegetables</h6>
+							<p>Second courses</p>
+							<p class="food-price">$35.00</p>
+						</figure>
+					</li>
+					<div class="modal fade bd-example-modal-lg" id="Modal5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
 									<h5 class="modal-title" id="exampleModalLabel">Paleo beef steak with vegetables</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									  <span aria-hidden="true">&times;</span>
 									</button>
-								  </div>
-								  <div class="modal-body">
+								</div>
+								<div class="modal-body">
 									<div class="container-fluid">
 										<div class="row-modal">
 											<ul>
@@ -352,33 +357,33 @@
 												</li>
 											</ul>
 										</div>
-									 </div>
-								  </div>
-								  <div class="modal-footer">
+									</div>
+								</div>
+								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 									<button type="button" class="btn add-to-cart" data-name="Paleo beef steak" data-price="35.00">Add to cart</button>
-								  </div>
 								</div>
-							  </div>
-							</div>								
-						<li data-toggle="modal" data-target="#Modal6">
-							<figure class="food-photo  img-thumbnail">
-								<img class="img-fluid" src="/resources/img/6.jpg" alt="Healthy baguette with egg and vegetables">
-								<h6>Healthy baguette with egg and vegetables</h6>
-								<p>Entrees</p>
-								<p class="food-price">$9.00</p>
-							</figure>
-						</li>
-							<div class="modal fade bd-example-modal-lg" id="Modal6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg" role="document">
-								<div class="modal-content">
-								  <div class="modal-header">
+							</div>
+						</div>
+					</div>
+					<li data-toggle="modal" data-target="#Modal6">
+						<figure class="food-photo  img-thumbnail">
+							<img class="img-fluid" src="/resources/img/6.jpg" alt="Healthy baguette with egg and vegetables">
+							<h6>Healthy baguette with egg and vegetables</h6>
+							<p>Entrees</p>
+							<p class="food-price">$9.00</p>
+						</figure>
+					</li>
+					<div class="modal fade bd-example-modal-lg" id="Modal6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
 									<h5 class="modal-title" id="exampleModalLabel">Healthy baguette with egg and vegetables</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									  <span aria-hidden="true">&times;</span>
 									</button>
-								  </div>
-								  <div class="modal-body">
+								</div>
+								<div class="modal-body">
 									<div class="container-fluid">
 										<div class="row-modal">
 											<ul>
@@ -408,33 +413,33 @@
 												</li>
 											</ul>
 										</div>
-									 </div>
-								  </div>
-								  <div class="modal-footer">
+									</div>
+								</div>
+								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 									<button type="button" class="btn add-to-cart" data-name="Healthy baguette" data-price="9.00">Add to cart</button>
-								  </div>
 								</div>
-							  </div>
-							</div>								
-						<li data-toggle="modal" data-target="#Modal7">
-							<figure class="food-photo img-thumbnail">
-								<img class="img-fluid" src="/resources/img/7.jpg" alt="Burger with cheddar and bacon">
-								<h6>Burger with cheddar and bacon</h6>
-								<p>Second courses</p>
-								<p class="food-price">$13.00</p>
-							</figure>
-						</li>
-							<div class="modal fade bd-example-modal-lg" id="Modal7" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg" role="document">
-								<div class="modal-content">
-								  <div class="modal-header">
+							</div>
+						</div>
+					</div>
+					<li data-toggle="modal" data-target="#Modal7">
+						<figure class="food-photo img-thumbnail">
+							<img class="img-fluid" src="/resources/img/7.jpg" alt="Burger with cheddar and bacon">
+							<h6>Burger with cheddar and bacon</h6>
+							<p>Second courses</p>
+							<p class="food-price">$13.00</p>
+						</figure>
+					</li>
+					<div class="modal fade bd-example-modal-lg" id="Modal7" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
 									<h5 class="modal-title" id="exampleModalLabel">Burger with cheddar and bacon</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									  <span aria-hidden="true">&times;</span>
 									</button>
-								  </div>
-								  <div class="modal-body">
+								</div>
+								<div class="modal-body">
 									<div class="container-fluid">
 										<div class="row-modal">
 											<ul>
@@ -464,33 +469,33 @@
 												</li>
 											</ul>
 										</div>
-									 </div>
-								  </div>
-								  <div class="modal-footer">
+									</div>
+								</div>
+								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 									<button type="button" class="btn add-to-cart" data-name="Burger with cheddar and bacon" data-price="13.00">Add to cart</button>
-								  </div>
 								</div>
-							  </div>
-							</div>								
-						<li data-toggle="modal" data-target="#Modal8">
-							<figure class="food-photo img-thumbnail">
-								<img class="img-fluid" src="/resources/img/8.jpg" alt="Granola with cherries and strawberries">
-								<h6>Granola with cherries and strawberries</h6>
-								<p>Salads</p>
-								<p class="food-price">$8.00</p>
-							</figure>
-						</li>							
-							<div class="modal fade bd-example-modal-lg" id="Modal8" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg" role="document">
-								<div class="modal-content">
-								  <div class="modal-header">
+							</div>
+						</div>
+					</div>
+					<li data-toggle="modal" data-target="#Modal8">
+						<figure class="food-photo img-thumbnail">
+							<img class="img-fluid" src="/resources/img/8.jpg" alt="Granola with cherries and strawberries">
+							<h6>Granola with cherries and strawberries</h6>
+							<p>Salads</p>
+							<p class="food-price">$8.00</p>
+						</figure>
+					</li>
+					<div class="modal fade bd-example-modal-lg" id="Modal8" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
 									<h5 class="modal-title" id="exampleModalLabel">Granola with cherries and strawberries</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									  <span aria-hidden="true">&times;</span>
 									</button>
-								  </div>
-								  <div class="modal-body">
+								</div>
+								<div class="modal-body">
 									<div class="container-fluid">
 										<div class="row-modal">
 											<ul>
@@ -520,62 +525,88 @@
 												</li>
 											</ul>
 										</div>
-									 </div>
-								  </div>
-								  <div class="modal-footer">
+									</div>
+								</div>
+								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 									<button type="button" class="btn add-to-cart" data-name="Granola" data-price="8.00">Add to cart</button>
-								  </div>
 								</div>
-							  </div>
-							</div>					
+							</div>
+						</div>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<div class="modal fade modal-dashboard" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-dashboard">
+			<div class="modal-content modal-content-dashboard">
+				<div class="row justify-content-end">
+					<button type="button" class="close close-dashboard" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<section class="dashboard">
+					<div class="container-fluid">
+						<div class="row">
+							<table>
+								<thead>
+									<tr>
+										<th>Position</th>
+										<th>Product</th>
+										<th>Count</th>
+										<th>Price / 1 Product ($)</th>
+										<th>Total / Product ($)</th>
+										<th> </th>
+									</tr>
+								</thead>
+								<tbody id="show-cart">
+
+								</tbody>
+							</table>
+							<div class="table-footer">
+								<button id="clear-cart">Clear Cart</button>
+								<div class="total">Total Cart: $ <span id="total-cart"></span></div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="footer-nav">
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Press</a></li>
+						<li><a href="#">iOS App</a></li>
+						<li><a href="#">Android App</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<ul class="social-links">
+						<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+						<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+						<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+						<li><a href="#"><i class="ion-social-instagram"></i></a></li>
 					</ul>
 				</div>
 			</div>
-     	</section>
-    	     
-    	<section class="dashboard" style="display: none;">
-    		<div>
-    			<ul id="show-cart">
-    				
-    			</ul>
-    			<button id="clear-cart">Clear Cart</button>
-    			<div>Total Cart: $ <span id="total-cart"></span></div>
-    		</div>
-    	</section>
-     	     		
-     	<footer>
-           <div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-6">
-						<ul class="footer-nav">
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Press</a></li>
-							<li><a href="#">iOS App</a></li>
-							<li><a href="#">Android App</a></li>
-						</ul>
-					</div>
-					<div class="col-sm-6">
-						<ul class="social-links">
-							<li><a href="#"><i class="ion-social-facebook"></i></a></li>
-							<li><a href="#"><i class="ion-social-twitter"></i></a></li>
-							<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-							<li><a href="#"><i class="ion-social-instagram"></i></a></li>
-						</ul>
-					</div>
-				</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<p>Copyright &copy; 2017 by Omnifood. All rights reserved.</p>
 			</div>
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <p>Copyright &copy; 2017 by Omnifood. All rights reserved.</p>
-                </div>
-			</div>            
-        </footer> 
-        
-      	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>   
-   		<script src="resources/js/script.js"></script>
-    </body>
-       	
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="resources/js/script.js"></script>
+</body>

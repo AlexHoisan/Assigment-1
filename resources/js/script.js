@@ -1,170 +1,189 @@
 /* Mobile nav */
 
-$('.js--nav-icon').click(function(){
-    var nav = $('.js--main-nav');
-    var icon = $('.js--nav-icon i');
-        
-    nav.toggleClass('showNav');
-    if (icon.hasClass('ion-navicon-round')) {
-        icon.addClass('ion-close-round');
-        icon.removeClass('ion-navicon-round');
-    } else {
-        icon.addClass('ion-navicon-round');
-        icon.removeClass('ion-close-round');
-    }
-        
+$('.js--nav-icon').click(function () {
+	var nav = $('.js--main-nav');
+	var icon = $('.js--nav-icon i');
+
+	nav.toggleClass('showNav');
+	if (icon.hasClass('ion-navicon-round')) {
+		icon.addClass('ion-close-round');
+		icon.removeClass('ion-navicon-round');
+	} else {
+		icon.addClass('ion-navicon-round');
+		icon.removeClass('ion-close-round');
+	}
+
 });
 
 /* Shopping Cart */
 
-$(".add-to-cart").click(function(event){
+
+
+$(".add-to-cart").click(function (event) {
 	event.preventDefault();
 	var name = $(this).attr("data-name");
 	var price = Number($(this).attr("data-price"));
 	var a = document.getElementById("order-quantity");
 	var count = parseFloat(a.options[a.selectedIndex].text);
-	
-	
-	
-	addItemToCart(name, price, count);
+
+
+
+	shoppingCart.addItemToCart(name, price, count);
 	displayCart();
 });
 
-$("#clear-cart").click(function(event){
-	clearCart();
+$("#clear-cart").click(function (event) {
+	shoppingCart.clearCart();
 	displayCart();
 });
 
 function displayCart() {
-	var cartArray = listCart();
+	var cartArray = shoppingCart.listCart();
 	var output = "";
+	var position = 1;
 	for (var i in cartArray) {
-		output += "<li>"+cartArray[i].name+" "+"<span>"+cartArray[i].count+"</span>"+"</li>";
+		output += `
+				  <tr>
+					<td>
+					  <button class='delete-item' data-name='"+cartArray[i].name+"'>X</button>
+					  <p>${position}</p>
+					</td>
+					<td>
+					  ${cartArray[i].name}
+					</td>
+					<td>
+					  <span>${cartArray[i].count}</span>
+					  <div class='add-remove-buttons'>
+						<button class='plus-item' data-name='${cartArray[i].name}'>+</button>
+						<button class='substract-item' data-name='${cartArray[i].name}'> - </button>
+					  </div>
+					</td>
+					<td>
+					  ${cartArray[i].price}
+					</td>
+					<td>
+					  ${cartArray[i].total}
+					</td>
+				  </tr>
+				`
+
+		position++;
 	}
 	$("#show-cart").html(output);
-	$("#total-cart").html(totalCart());
-};
+	$("#count-cart").html(shoppingCart.countCart())
+	$("#total-cart").html(shoppingCart.totalCart());
+}
+
+$("#show-cart").on("click", ".delete-item", function (event) {
+	var name = $(this).attr("data-name");
+	shoppingCart.removeItemFromCartAll(name);
+	displayCart();
+});
+
+$("#show-cart").on("click", ".plus-item", function (event) {
+	var name = $(this).attr("data-name");
+	shoppingCart.addItemToCart(name, 0, 1);
+	displayCart();
+});
+
+$("#show-cart").on("click", ".substract-item", function (event) {
+	var name = $(this).attr("data-name");
+	shoppingCart.removeItemFromCart(name);
+	displayCart();
+});
+
+
 
 /***************************************/
 // Shopping cart functions
-/* Scope - Determins where a variable or a value is visible */ 
 
-var cart = [];
-//when you use the sintax below, it actually generates an object
+var shoppingCart = {};
+shoppingCart.cart = [];
 
-var Item = function(name, price, count) {
+shoppingCart.Item = function (name, price, count) {
 	this.name = name
 	this.price = price
 	this.count = count
 };
 
-/*
-// new item for shopping cart
-var apple = new Item("Apple", 1.99, 1); // {name, price, count}
-
-cart.push(new Item("Brush", 2.13, 1));
-cart.push(apple);*/
-
-// addItemToCart(name, price, count)
-
-function addItemToCart(name, price, count) {
-	for (var i in cart) {
-		if (cart[i].name === name) {
-			cart[i].count += count;
-			saveCart();
+shoppingCart.addItemToCart = function (name, price, count) {
+	for (var i in this.cart) {
+		if (this.cart[i].name === name) {
+			this.cart[i].count += count;
+			this.saveCart();
 			return;
 		}
 	}
-	var item = new Item(name, price, count);
-	cart.push(item);
-	saveCart();
+	var item = new this.Item(name, price, count);
+	this.cart.push(item);
+	this.saveCart();
 };
 
-// removeItemFromCart(name) // Removes one item
-
-function removeItemFromCart(name) {
-	for (var i in  cart) {
-		if (cart[i].name === name) {
-			cart[i].count --;
-			if (cart[i].count === 0) {
-				cart.splice(i, 1); //it removes "1" item from the array
+shoppingCart.removeItemFromCart = function (name) {
+	for (var i in this.cart) {
+		if (this.cart[i].name === name) {
+			this.cart[i].count--;
+			if (this.cart[i].count == 0) {
+				this.cart.splice(i, 1);
 			}
-			return;
-		}
-	}
-	saveCart();
-}
-
-// removeItemFromCartAll(name) //Removes all items with name
-
-function removeItemFromCartAll(name) {
-	for (var i in cart) {
-		if (cart[i].name === name) {
-			cart.splice(i, 1);
 			break;
 		}
 	}
-	saveCart();
-}
+	this.saveCart();
+};
 
+shoppingCart.removeItemFromCartAll = function (name) {
+	for (var i in this.cart) {
+		if (this.cart[i].name === name) {
+			this.cart.splice(i, 1);
+			break;
+		}
+	}
+	this.saveCart();
+};
 
-//clearCart()
+shoppingCart.clearCart = function () {
+	this.cart = [];
+	this.saveCart();
+};
 
-function clearCart() {
-	cart = [];
-	saveCart();
-}
-
-//countCart() -> Returns total count
-
-function countCart() {
+shoppingCart.countCart = function () {
 	var totalCount = 0;
-	for (var i in cart){
-		totalCount += cart[i].count;
+	for (var i in this.cart) {
+		totalCount += this.cart[i].count;
 	}
 	return totalCount;
-}
+};
 
-//totalCart() -> Returns the total cost
-
-function totalCart() {
+shoppingCart.totalCart = function () {
 	var totalCost = 0;
-	for (var i in cart) {
-		totalCost += cart[i].price * cart[i].count;
+	for (var i in this.cart) {
+		totalCost += this.cart[i].price * this.cart[i].count;
 	}
-	return totalCost;
-}
+	return totalCost.toFixed(2);
+};
 
-//listCart() -> an array of items
-
-function listCart() {
-	/*return cart.slice(); -> here, the slice property makes a copy of the array; but still reference the objects inside*/
+shoppingCart.listCart = function () {
 	var cartCopy = [];
-	for (var i in cart) {
-		var item = cart[i];
+	for (var i in this.cart) {
+		var item = this.cart[i];
 		var itemCopy = {};
 		for (var p in item) {
 			itemCopy[p] = item[p];
 		}
+		itemCopy.total = (item.price * item.count).toFixed(2);
 		cartCopy.push(itemCopy);
 	}
 	return cartCopy;
-}
+};
 
-//saveCart() -> Local
+shoppingCart.saveCart = function () {
+	localStorage.setItem("shoppingCart", JSON.stringify(this.cart));
+};
 
-function saveCart() {
-	localStorage.setItem("shoppingCart", JSON.stringify(cart));
-}
+shoppingCart.loadCart = function () {
+	this.cart = JSON.parse(localStorage.getItem("shoppingCart"));
+};
 
-//loadCart() -> loads the cart when page is opened
-
-function loadCart() {
-	cart = JSON.parse(localStorage.getItem("shoppingCart"));
-}
-
-loadCart();
+shoppingCart.loadCart();
 displayCart();
-
-
-
